@@ -1,0 +1,11 @@
+<ul>
+    <% page.posts.each(function(item){ %>
+        <li class="post">
+            <a href="<%- url_for(item.path) %>">
+                <%- item.title %>
+            </a>
+        </li>
+    <% }); %>
+</ul>
+
+<%- partial('_partial/pagination') %>
