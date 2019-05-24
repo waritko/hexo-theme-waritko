@@ -34,3 +34,8 @@ body
     text-align: justify;
     margin-top: 1.5em;
 }
+
+.post-link
+{
+    color: rgba(0, 0, 0, 0.7) !important;
+}
