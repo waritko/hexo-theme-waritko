@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+    <meta name="description" content="Speculum Pages revival - Enema, medical, waterplay and other related stories :: <% if(page.title) { %><%- page.title %><% } %><% if(page.current) { %>Page <%- page.current %><% } %>">
     <meta name="author" content="<% if(page.author) { %><%- page.author %><% } %>">
     <meta name="generator" content="Hexo">
-    <title><% if(page.title) { %><%- page.title %> :: <% } %><%- config.title %></title>
+    <title><% if(page.title) { %><%- page.title %> :: <% } %><%- config.title %><% if(page.current) { %> :: Page <%- page.current %><% } %></title>
 
     <!-- Bootstrap core CSS -->
     <%- css('css/bootstrap.css') %>
@@ -14,33 +14,37 @@
     <%- css('css/style.css') %>
 </head>
 <body>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="<%- url_for('/') %>"><%- config.title %></a>
-    <% if(page.title) { %>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <span class="navbar-text justify-content-end"><%- page.title %></span>
-                </li>
-            </ul>
-        </div>
-    <% } %>
-</nav>
-
-<!-- Main content -->
 <main role="main" class="container">
     <div class="jumbotron">
         <%- body %>
     </div>
 </main>
 
-<!-- Scripts -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- JS scripts -->
+<%- js('js/jquery.js') %>
 <%- js('js/bootstrap.js') %>
+
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//stats.varak.net/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '5']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//stats.varak.net/matomo.php?idsite=5&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Matomo Code -->
+
+<script data-goatcounter="https://waritko.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
 
 </body>
 </html>
